@@ -1,7 +1,7 @@
 <?php
 
 //koneksi database
-$koneksi = mysqli_connect("localhost", "root", "", "db_stan");
+$koneksi = mysqli_connect("localhost", "root", "", "db_kpknlp");
 
 function registrasi($data) {
     global $koneksi;
