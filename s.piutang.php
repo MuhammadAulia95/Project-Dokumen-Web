@@ -22,7 +22,7 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/s.penilaian.css">
+    <link rel="stylesheet" href="css/s.piutang.css">
 
 </head>
 
@@ -35,7 +35,7 @@
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text mx-3"><img src="img/logo1.png" style="width: 450px;" alt=""></div>
@@ -46,13 +46,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="akun.html">
+                <a class="nav-link" href="akun.php">
                     <i class="fas fa-fw fad fa-user"></i>
                     <span>Akun</span></a>
             </li>
@@ -75,10 +75,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Dokumen :</h6>
-                        <a class="collapse-item" href="allDokumen.html">Semua Dokumen</a>
-                        <a class="collapse-item" href="s.penilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="s.piutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="DokumenLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="allDokumen.php">Semua Dokumen</a>
+                        <a class="collapse-item" href="s.penilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="s.piutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="DokumenLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -94,9 +94,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">INPUT</h6>
-                        <a class="collapse-item" href="inputPenilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="inputPiutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="inputLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="inputPiutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="inputLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -245,8 +245,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Seksi Penilaian Dokumen</h1>
-                    
+                    <h1 class="h3 mb-2 text-gray-800">Seksi Piutang Dokumen</h1>
+
                     <!-- Garis Dibawah Semua Dokumen-->
                     <div class="col-xl-12 col-lg-5">
                         <div class="card shadow mb-4">  
@@ -272,12 +272,11 @@
                                     <thead>
                                       <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">Nomor Laporan</th>
-                                        <th scope="col">Tanggal Laporan</th>
-                                        <th scope="col">Tanggal Penilaian</th>
-                                        <th scope="col">Nama Penilai</th>
-                                        <th scope="col">Objek Penilaian</th>
-                                        <th scope="col">Satuan Kerja</th>
+                                        <th scope="col">Nomor Registrasi</th>
+                                        <th scope="col">Nama Debitur</th>
+                                        <th scope="col">Nama Penyerah Piutang</th>
+                                        <th scope="col">Jenis Dokumen</th>
+                                        <th scope="col">Jenis Inaktif</th>
                                         <th scope="col">Link</th>
                                         <th scope="col">Aksi</th>
                                       </tr>
@@ -285,12 +284,11 @@
                                     <tbody>
                                       <tr>
                                         <th scope="row">1</th>
-                                        <td>LAP-0003/1/1/WKN.04/KNL.02/2021</td>
-                                        <td>2021-01-11</td>
-                                        <td>2020-12-29</td>
-                                        <td>Mamad</td>
-                                        <td>Sebagian Tanah dan Bangunan untuk Tempat Usaha</td>
-                                        <td>Dinas Pekerjaan Umum</td>
+                                        <td>1309008924</td>
+                                        <td>Udin Serut</td>
+                                        <td>UNTAN</td>
+                                        <td>Aktif</td>
+                                        <td> - </td>
                                         <td>http://drive.goole.com/</td>
                                         <td>
                                             <div class="aksi">
@@ -301,12 +299,11 @@
                                       </tr>
                                       <tr>
                                         <th scope="row">2</th>
-                                        <td>LAP-0013/1/2/WKN.04/KNL.05/2020</td>
-                                        <td>2020-06-21</td>
-                                        <td>2019-12-09</td>
-                                        <td>Rezal</td>
-                                        <td>Sebagian Tanah dan Bangunan untuk Pendidikan</td>
-                                        <td>Dinas Pekerjaan Umum</td>
+                                        <td>1309008821</td>
+                                        <td>Douglas</td>
+                                        <td>POLITEKNIK</td>
+                                        <td>Inaktif</td>
+                                        <td>PSBDT</td>
                                         <td>http://drive.goole.com/</td>
                                         <td>
                                             <div class="aksi">
@@ -314,6 +311,8 @@
                                                 <button type="button" class="btn btn-danger">Hapus</button>
                                             </div>
                                         </td>
+                                      </tr>
+                                        
                                       </tr>
                                     </tbody>
                                   </table>
@@ -330,6 +329,7 @@
                                   </nav>
                                   <!-- Akhir next -->
 
+                                
                             </div>
                         </div>
                     </div>
@@ -375,7 +375,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>

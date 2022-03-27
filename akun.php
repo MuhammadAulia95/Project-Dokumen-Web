@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if ( !isset($_SESSION["login"]) ) {
+  ?>
+
+    <script type="text/javascript">
+      alert("Kamu belum login!");
+      window.location.href="Login.php";
+    </script>
+  <?php
+
+  exit;
+  
+}
+
+
+//koneksi database
+require 'function.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +39,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/akun.css">
 
 </head>
 
@@ -29,7 +50,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text mx-3"><img src="img/logo1.png" style="width: 450px;" alt=""></div>
@@ -40,13 +61,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             
             <li class="nav-item active">
-                <a class="nav-link" href="akun.html">
+                <a class="nav-link" href="akun.php">
                     <i class="fas fa-fw fad fa-user"></i>
                     <span>Akun</span></a>
             </li>
@@ -69,10 +90,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Dokumen :</h6>
-                        <a class="collapse-item" href="allDokumen.html">Semua Dokumen</a>
-                        <a class="collapse-item" href="s.penilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="s.piutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="DokumenLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="allDokumen.php">Semua Dokumen</a>
+                        <a class="collapse-item" href="s.penilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="s.piutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="DokumenLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -88,9 +109,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Input</h6>
-                        <a class="collapse-item" href="inputPenilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="inputPiutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="inputLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="inputPiutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="inputLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -98,7 +119,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Tombol Minimize Sidebar -->
+            <!-- Tombol minimize sidebar -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
@@ -143,7 +164,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ilham Rafiedhia</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['nama'] ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -167,43 +188,44 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">AKUN</h1>
+                    </div>
+                    <div class="col-xl-5 col-lg-1">
+                        <div class="card shadow mb-4">  
+                        </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="kontent" style="padding: 10px;">
+                                    <h6>Nama : </h6>
+                                    <p><?php echo $_SESSION['nama'] ?></p><hr>
 
+                                    <h6>Email : </h6>
+                                    <p><?php echo $_SESSION['email'] ?></p><hr>
+                                    
+                                    <h6>Hak Akses : </h6>
+                                    <p>User</p><hr>
+                                </div>
 
-                        <!-- Garis Dibawah Dashboard -->
-                        <div class="col-xl-7 col-lg-5">
-                            <div class="card shadow mb-4">  
+                                    <div class="col-sm-12">
+                                      <a class="btn btn-info"  href="editAkun.php">Edit</a>
+                                    </div><br>
+                                 
+                                
+                                
                             </div>
                         </div>
-                        <!-- End Garis -->
-                    
+                        
+                    </div>
 
                     <!-- Content Row -->
                     <div class="row">
 
                        
 
-                        <div class="col-lg-7 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-dark">Selamat Datang</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/welcome.jpg" alt="...">
-                                    </div>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus perspiciatis, ratione cum, est aperiam fugit quia voluptates perferendis ea officia veritatis ipsam quidem ducimus expedita. Ab at voluptatem perferendis ex?</p>
-                                </div>
-                            </div>
-
-                            
-
-                        </div>
+                        
                     </div>
 
                 </div>
@@ -247,7 +269,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

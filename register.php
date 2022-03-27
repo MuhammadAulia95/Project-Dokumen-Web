@@ -1,3 +1,24 @@
+<?php
+
+require 'function.php';
+
+if (isset($_POST["register"])) {
+    
+    if (registrasi($_POST) > 0 ) {
+        ?>
+
+            <script type="text/javascript">
+                alert("Data Berhasil Ditambahkan!");
+                window.location.href="login.php";
+            </script>
+
+        <?php
+    } else {
+        echo mysqli_error($koneksi);
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +38,7 @@
 			<hr class="header-line">
 			<div class="input-group">
 				<span class="details">Nama Lengkap</span>
-				<input type="text" placeholder="Masukan Nama Lengkap" name="namalengkap">
+				<input type="text" placeholder="Masukan Nama Lengkap" name="nama">
 			</div>
 			<hr>
 			<div class="input-group">
@@ -27,7 +48,7 @@
 			<hr>
 			<div class="input-group">
 				<span class="details">username</span>
-				<input type="email" placeholder="Masukan email" name="username">
+				<input type="text" placeholder="Masukan email" name="username">
 			</div>
 			<hr>
 			<div class="input-group">
@@ -37,13 +58,13 @@
 			<hr>
             <div class="input-group">
 				<span class="details">Konfirmasi Password</span>
-				<input type="password" placeholder="Konfirmasi Password" name="cpassword">
+				<input type="password" placeholder="Konfirmasi Password" name="password2">
 			</div>
 			<hr>
 			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
+				<button name="register" type="submit" class="btn">Register</button>
 			</div>
-			<p class="login-register-text">Sudah punya akun? <a href="Login.html">Login disini</a></p>
+			<p class="login-register-text">Sudah punya akun? <a href="Login.php">Login disini</a></p>
 		</form>
 	</div>
 </body>

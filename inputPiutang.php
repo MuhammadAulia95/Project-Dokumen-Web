@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/akun.css">
+    <link rel="stylesheet" href="css/inputPiutang.css">
 
 </head>
 
@@ -30,7 +30,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text mx-3"><img src="img/logo1.png" style="width: 450px;" alt=""></div>
@@ -41,13 +41,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             
             <li class="nav-item active">
-                <a class="nav-link" href="akun.html">
+                <a class="nav-link" href="akun.php">
                     <i class="fas fa-fw fad fa-user"></i>
                     <span>Akun</span></a>
             </li>
@@ -70,10 +70,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Dokumen :</h6>
-                        <a class="collapse-item" href="allDokumen.html">Semua Dokumen</a>
-                        <a class="collapse-item" href="s.penilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="s.piutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="DokumenLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="allDokumen.php">Semua Dokumen</a>
+                        <a class="collapse-item" href="s.penilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="s.piutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="DokumenLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -89,9 +89,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Input</h6>
-                        <a class="collapse-item" href="inputPenilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="inputPiutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="inputLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="inputPiutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="inputLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -99,7 +99,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Tombol minimize sidebar -->
+            <!-- Tombol Minimize Sidebar -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
@@ -168,29 +168,57 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">AKUN</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Input Piutang</h1>
                     </div>
-                    <div class="col-xl-5 col-lg-1">
+                    <div class="col-xl-12 col-lg-1">
                         <div class="card shadow mb-4">  
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xl-5 col-lg-5">
+                        <div class="col-xl-12 col-lg-5">
                             <div class="card shadow mb-4">
-                                <div class="kontent" style="padding: 10px;">
-                                    <h6>Nama : </h6>
-                                    <p>Ilham Rafiedhia</p><hr>
+                                <div class="kontent" style="padding: 20px;">
+                                    <h6>Nomor Registrasi : </h6>
+                                    <input type="text"><hr>
 
-                                    <h6>Email : </h6>
-                                    <p>Ilham99@gmail.com</p><hr>
+                                    <h6>Nomor Debitur : </h6>
+                                    <input type="text"><hr>
                                     
-                                    <h6>Hak Akses : </h6>
-                                    <p>User</p><hr>
+                                    <h6>Nama Penyerah Piutang : </h6>
+                                    <input type="text"><hr>
+
+                                    <h6>Tanggal Penyerahan Piutang : </h6>
+                                    <input type="date"><hr>
+
+                                    <h6>Nilai Penyerahan Piutang : </h6>
+                                    <input type="text"><hr>
+                                    
+                                    <div class="jenisdokumen">
+                                        <h6>Jenis Dokumen : </h6>
+                                        <Select>
+                                            <option value="aktif">Aktif</option>
+                                            <option value="inaktif">Inaktif</option>
+                                        </Select>
+                                    </div>
+
+                                    <hr>
+                                    <h6>Jenis Inaktif : </h6>
+                                    <input type="text" placeholder="Diisi jika jenis dokumen Inaktif"><hr>
+
+                                    <div class="nobox">
+                                        <h6>No Box : </h6>
+                                        <input type="text">
+                                    </div>
+                                    
+                                    <hr>
+                                    <h6>Link :  </h6>
+                                    <input type="text">
+                                        
                                 </div>
 
-                                    <div class="col-sm-12">
-                                      <a class="btn btn-info"  href="editAkun.html">Edit</a>
+                                    <div class="col-sm-12" style="padding: 20px;">
+                                      <button class="btn btn-info">Submit</button>
                                     </div><br>
                                  
                                 
@@ -249,7 +277,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>

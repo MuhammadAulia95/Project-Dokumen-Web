@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<.php lang="en">
 
 <head>
 
@@ -35,7 +35,7 @@
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text mx-3"><img src="img/logo1.png" style="width: 450px;" alt=""></div>
@@ -46,13 +46,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="akun.html">
+                <a class="nav-link" href="akun.php">
                     <i class="fas fa-fw fad fa-user"></i>
                     <span>Akun</span></a>
             </li>
@@ -75,10 +75,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Daftar Dokumen :</h6>
-                        <a class="collapse-item" href="allDokumen.html">Semua Dokumen</a>
-                        <a class="collapse-item" href="s.penilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="s.piutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="DokumenLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="allDokumen.php">Semua Dokumen</a>
+                        <a class="collapse-item" href="s.penilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="s.piutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="DokumenLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -94,9 +94,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Input</h6>
-                        <a class="collapse-item" href="inputPenilaian.html">Seksi Penilaian</a>
-                        <a class="collapse-item" href="inputPiutang.html">Seksi Piutang</a>
-                        <a class="collapse-item" href="inputLainnya.html">Lainnya</a>
+                        <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
+                        <a class="collapse-item" href="inputPiutang.php">Seksi Piutang</a>
+                        <a class="collapse-item" href="inputLainnya.php">Lainnya</a>
                     </div>
                 </div>
             </li>
@@ -487,7 +487,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>
@@ -512,4 +512,4 @@
 
 </body>
 
-</html>
+</.php>
