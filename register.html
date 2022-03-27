@@ -1,49 +1,50 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!---<title> Responsive Registration Form | CodingLab </title>--->
-    <link rel="stylesheet" href="style-register.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-  <div class="container">
-    <div class="title">Registrasi</div>
-    <div class="content">
-      <form action="#">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Nama Lengkap</span>
-            <input type="text" placeholder="Masukan nama anda" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Username</span>
-            <input type="text" placeholder="Masukan username anda" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Masukan email anda" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Nomor Telepon</span>
-            <input type="text" placeholder="Masukan nomor telepon anda" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Password</span>
-            <input type="password" placeholder="masukan password " required>
-          </div>
-          <div class="input-box">
-            <span class="details">Konfirmasi Password</span>
-            <input type="password" placeholder="Konfirmasi password " required>
-          </div>
-        </div>
-        <div class="button">
-          <input type="submit" value="Register">        
-        </div>
-      </form>
-    </div>
-  </div>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style-LogReg.css">
+
+	<title>Register Form</title>
+</head>
+<body>
+	<div class="container">
+		<form action="" method="POST" class="login-email">
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+			<hr class="header-line">
+			<div class="input-group">
+				<span class="details">Nama Lengkap</span>
+				<input type="text" placeholder="Masukan Nama Lengkap" name="namalengkap">
+			</div>
+			<hr>
+			<div class="input-group">
+				<span class="details">Email</span>
+				<input type="email" placeholder="Masukan username" name="email">
+			</div>
+			<hr>
+			<div class="input-group">
+				<span class="details">username</span>
+				<input type="email" placeholder="Masukan email" name="username">
+			</div>
+			<hr>
+			<div class="input-group">
+				<span class="details">Password</span>
+				<input type="password" placeholder="Masukan Password" name="password">
+            </div>
+			<hr>
+            <div class="input-group">
+				<span class="details">Konfirmasi Password</span>
+				<input type="password" placeholder="Konfirmasi Password" name="cpassword">
+			</div>
+			<hr>
+			<div class="input-group">
+				<button name="submit" class="btn">Register</button>
+			</div>
+			<p class="login-register-text">Sudah punya akun? <a href="Login.html">Login disini</a></p>
+		</form>
+	</div>
 </body>
 </html>
