@@ -1,17 +1,16 @@
 <?php
 session_start();
 
-if ( !isset($_SESSION["login"]) ) {
-  ?>
+if (!isset($_SESSION["login"])) {
+?>
 
     <script type="text/javascript">
-      alert("Kamu belum login!");
-      window.location.href="Login.php";
+        alert("Kamu belum login!");
+        window.location.href = "Login.php";
     </script>
-  <?php
+<?php
 
-  exit;
-  
+    exit;
 }
 
 
@@ -33,9 +32,7 @@ require 'function.php';
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -65,7 +62,7 @@ require 'function.php';
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            
+
             <li class="nav-item active">
                 <a class="nav-link" href="akun.php">
                     <i class="fas fa-fw fad fa-user"></i>
@@ -82,8 +79,7 @@ require 'function.php';
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fad fa-book"></i>
                     <span>Dokumen</span>
                 </a>
@@ -100,13 +96,11 @@ require 'function.php';
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fas fa-pen-square"></i>
                     <span>Input</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Input</h6>
                         <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
@@ -124,7 +118,7 @@ require 'function.php';
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -144,13 +138,12 @@ require 'function.php';
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            
+
                             <div class="input-group-append">
-                                
-                                    
+
+
                             </div>
                         </div>
                     </form>
@@ -162,15 +155,12 @@ require 'function.php';
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['nama'] ?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -191,7 +181,7 @@ require 'function.php';
                         <h1 class="h3 mb-0 text-gray-800">Input Penilaian</h1>
                     </div>
                     <div class="col-xl-12 col-lg-1">
-                        <div class="card shadow mb-4">  
+                        <div class="card shadow mb-4">
                         </div>
                     </div>
 
@@ -200,75 +190,83 @@ require 'function.php';
                             <div class="card shadow mb-4">
                                 <div class="kontent" style="padding: 20px;">
                                     <h6>Nomor Laporan : </h6>
-                                    <input type="text"><hr>
+                                    <input type="text" placeholder="Masukkan nomor laporan...">
+                                    <hr>
 
                                     <h6>Tanggal Laporan : </h6>
-                                    <input type="date"><hr>
-                                    
+                                    <input type="date">
+                                    <hr>
+
                                     <h6>Tanggal Penilaian : </h6>
-                                    <input type="date"><hr>
+                                    <input type="date">
+                                    <hr>
 
                                     <h6>Nama Penilaian : </h6>
-                                    <input type="text"><hr>
+                                    <input type="text" placeholder="Masukkan nama laporan...">
+                                    <hr>
 
                                     <h6>Objek Penilaian : </h6>
-                                    <input type="text"><hr>
+                                    <input type="text" placeholder="Masukkan objek penilaian...">
+                                    <hr>
 
                                     <h6>Kategori Objek : </h6>
-                                    <input type="text"><hr>
+                                    <input type="text" placeholder="Masukkan kategori objek...">
+                                    <hr>
 
                                     <h6>Satuan Kerja : </h6>
-                                    <input type="text"><hr>
-                                    
+                                    <input type="text" placeholder="Masukkan satuan kerja...">
+                                    <hr>
+
                                     <div class="nilaiwajar">
                                         <h6>Nilai Wajar : </h6>
-                                        <input type="text">
+                                        <input type="text" placeholder="Masukkan nilai...">
 
                                         <h6 style="margin-left: 20px;">Keterangan : </h6>
-                                        <input type="text">
+                                        <input type="text" placeholder="Keterangan...">
                                     </div>
 
                                     <hr>
-                                    <div class="nilailikuidasi"> 
+                                    <div class="nilailikuidasi">
                                         <h6>Nilai Likuidasi : </h6>
-                                        <input type="text">
-                                        
+                                        <input type="text" placeholder="Masukkan nilai...">
+
                                         <h6 style="margin-left: 20px;">Keterangan : </h6>
-                                        <input type="text">
+                                        <input type="text" placeholder="Keterangan...">
                                     </div>
 
                                     <hr>
                                     <div class="nilailainnya">
                                         <h6>Nilai Lainnya : </h6>
-                                        <input type="text">
-                                        
+                                        <input type="text" placeholder="Masukkan nilai...">
+
                                         <h6 style="margin-left: 20px;">Keterangan : </h6>
-                                        <input type="text"><hr>
+                                        <input type="text" placeholder="Keterangan...">
+                                        <hr>
                                     </div>
-                                    
+
                                     <hr>
-                                    <h6>Link :  </h6>
-                                    <input type="text">
-                                        
+                                    <h6>Link : </h6>
+                                    <input type="text" placeholder="Link...">
+
                                 </div>
 
-                                    <div class="col-sm-12" style="padding: 20px;">
-                                      <button class="btn btn-info">Submit</button>
-                                    </div><br>
-                                 
-                                
-                                
+                                <div class="col-sm-12" style="padding: 20px;">
+                                    <button class="btn btn-info">Submit</button>
+                                </div><br>
+
+
+
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
 
-                       
 
-                        
+
+
                     </div>
 
                 </div>
@@ -299,8 +297,7 @@ require 'function.php';
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
