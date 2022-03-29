@@ -1,17 +1,16 @@
 <?php
 session_start();
 
-if ( !isset($_SESSION["login"]) ) {
-  ?>
+if (!isset($_SESSION["login"])) {
+?>
 
     <script type="text/javascript">
-      alert("Kamu belum login!");
-      window.location.href="Login.php";
+        alert("Kamu belum login!");
+        window.location.href = "Login.php";
     </script>
-  <?php
+<?php
 
-  exit;
-  
+    exit;
 }
 
 
@@ -33,9 +32,7 @@ require 'function.php';
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -52,7 +49,7 @@ require 'function.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #054e6f;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -87,8 +84,7 @@ require 'function.php';
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Dokumen</span>
                 </a>
@@ -105,13 +101,11 @@ require 'function.php';
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-pen-square"></i>
                     <span>Input</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">INPUT</h6>
                         <a class="collapse-item" href="inputPenilaian.php">Seksi Penilaian</a>
@@ -153,18 +147,14 @@ require 'function.php';
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -177,10 +167,9 @@ require 'function.php';
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            
+
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -221,37 +210,21 @@ require 'function.php';
                             </div>
                         </li>
 
-                        
+
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['nama'] ?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Keluar
                                 </a>
                             </div>
                         </li>
@@ -269,7 +242,7 @@ require 'function.php';
 
                     <!-- Garis Dibawah Semua Dokumen-->
                     <div class="col-xl-12 col-lg-5">
-                        <div class="card shadow mb-4">  
+                        <div class="card shadow mb-4">
                         </div>
                     </div>
                     <!-- End Garis -->
@@ -288,68 +261,68 @@ require 'function.php';
                                 </form><br>
                                 <!-- Akhir Search -->
 
-                                <table class="table table-bordered table-dark">
+                                <table class="table table-bordered" style="background-color: #7bd7c2; color: #4f4f4f;">
                                     <thead>
-                                      <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Nomor Registrasi</th>
-                                        <th scope="col">Nama Debitur</th>
-                                        <th scope="col">Nama Penyerah Piutang</th>
-                                        <th scope="col">Jenis Dokumen</th>
-                                        <th scope="col">Jenis Inaktif</th>
-                                        <th scope="col">Link</th>
-                                        <th scope="col">Aksi</th>
-                                      </tr>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nomor Registrasi</th>
+                                            <th scope="col">Nama Debitur</th>
+                                            <th scope="col">Nama Penyerah Piutang</th>
+                                            <th scope="col">Jenis Dokumen</th>
+                                            <th scope="col">Jenis Inaktif</th>
+                                            <th scope="col">Link</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <th scope="row">1</th>
-                                        <td>1309008924</td>
-                                        <td>Udin Serut</td>
-                                        <td>UNTAN</td>
-                                        <td>Aktif</td>
-                                        <td> - </td>
-                                        <td>http://drive.goole.com/</td>
-                                        <td>
-                                            <div class="aksi">
-                                                <button type="button" class="btn btn-warning">Edit</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
-                                            </div>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">2</th>
-                                        <td>1309008821</td>
-                                        <td>Douglas</td>
-                                        <td>POLITEKNIK</td>
-                                        <td>Inaktif</td>
-                                        <td>PSBDT</td>
-                                        <td>http://drive.goole.com/</td>
-                                        <td>
-                                            <div class="aksi">
-                                                <button type="button" class="btn btn-warning">Edit</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
-                                            </div>
-                                        </td>
-                                      </tr>
-                                        
-                                      </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>1309008924</td>
+                                            <td>Udin Serut</td>
+                                            <td>UNTAN</td>
+                                            <td>Aktif</td>
+                                            <td> - </td>
+                                            <td>http://drive.goole.com/</td>
+                                            <td>
+                                                <div class="aksi">
+                                                    <button type="button" class="btn btn-warning">Edit</button>
+                                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>1309008821</td>
+                                            <td>Douglas</td>
+                                            <td>POLITEKNIK</td>
+                                            <td>Inaktif</td>
+                                            <td>PSBDT</td>
+                                            <td>http://drive.goole.com/</td>
+                                            <td>
+                                                <div class="aksi">
+                                                    <button type="button" class="btn btn-warning">Edit</button>
+                                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        </tr>
                                     </tbody>
-                                  </table>
+                                </table>
 
-                                  <!-- Tombol next -->
-                                  <nav aria-label="Page navigation example">
+                                <!-- Tombol next -->
+                                <nav aria-label="Page navigation example">
                                     <ul class="pagination">
-                                      <li class="page-item"><a class="page-link" href="#">Kembali</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Kembali</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
                                     </ul>
-                                  </nav>
-                                  <!-- Akhir next -->
+                                </nav>
+                                <!-- Akhir next -->
 
-                                
+
                             </div>
                         </div>
                     </div>
@@ -364,7 +337,7 @@ require 'function.php';
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; P2D 2022</span>
+                        <span>Copyright &copy; RISIMPAC 2022</span>
                     </div>
                 </div>
             </footer>
@@ -382,20 +355,19 @@ require 'function.php';
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Keluar</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Apakah anda yakin ingin keluar?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
+                    <a class="btn btn-danger" href="logout.php">Ya</a>
                 </div>
             </div>
         </div>

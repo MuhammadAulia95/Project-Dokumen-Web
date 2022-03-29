@@ -27,7 +27,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #054e6f;">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -102,7 +102,7 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Keluar
                                 </a>
                             </div>
                         </li>
@@ -143,14 +143,18 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
+
+                                        <button class="btn btn-success"><a href="#" style="color: white;">+ Tambah</a></button>
+                                        <br><br>
+
                                         <!-- Tombol Search -->
                                         <form class="form-inline">
                                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                                         </form><br>
                                         <!-- Akhir Search -->
         
-                                        <table class="table table-bordered table-dark">
+                                        <table class="table table-bordered"  style="background-color: #7bd7c2; color: #4f4f4f;">
                                             <thead>
                                               <tr>
                                                 <th scope="col">No</th>
@@ -164,10 +168,10 @@
                                             <tbody>
                                               <tr>
                                                 <th scope="row">1</th>
-                                                <td>LAP-0003/1/1/WKN.04/KNL.02/2021</td>
-                                                <td>2021-01-11</td>
-                                                <td>2020-12-29</td>
-                                                <td>Mamad</td>
+                                                <td>Muhammad Aulia</td>
+                                                <td>adeaca777@gmail.com</td>
+                                                <td>ade</td>
+                                                <td>123</td>
                                                 <td>
                                                     <div class="aksi">
                                                         <button type="button" class="btn btn-warning">Edit</button>
@@ -208,7 +212,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; P2D 2022</span>
+                        <span>Copyright &copy; RISIMPAC 2022</span>
                     </div>
                 </div>
             </footer>
@@ -231,36 +235,36 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Keluar</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Apakah anda yakin ingin keluar?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="#">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
+                    <a class="btn btn-danger" href="logout.php">Ya</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
 
