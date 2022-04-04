@@ -1,0 +1,16 @@
+.aksi button {
+  margin: 2px;
+}
+
+.pagination a {
+  color: rgb(65, 160, 255);
+}
+
+.page-item {
+  border: none;
+}
+
+.pagination a:hover {
+  color: white;
+  background-color: rgb(65, 160, 255);
+}

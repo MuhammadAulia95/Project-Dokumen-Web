@@ -1,0 +1,38 @@
+.kontent input {
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  background-color: rgb(232, 239, 248);
+}
+
+.kontent h6 {
+  font-weight: bold;
+}
+
+.col-sm-12 .btn-danger {
+}
+
+.col-sm-12 .btn-danger a {
+  text-decoration: none;
+  color: white;
+}
+
+.jenisdokumen {
+  display: flex;
+}
+
+.jenisdokumen h6 {
+  padding-top: 6px;
+}
+
+.jenisdokumen Select {
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 1px solid rgb(213, 213, 213);
+  font-family: inherit;
+  width: 7%;
+  padding: 5px;
+  color: rgb(61, 61, 61);
+}
